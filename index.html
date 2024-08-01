@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PMA Meme Creator</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Belleza&display=swap');
+    </style>
+</head>
+<body>
+    <a href="javascript:history.go(-1)" class="back-button">&#8592; Back</a>
+    <div class="canvas-container">
+        <canvas id="meme-canvas" width="500" height="500"></canvas>
+        <div class="Background">
+            <div class="bgsel">
+            <input type="checkbox" id="nobg" name="back" value="nobg" class="bg bg-ios">
+            Custom Background
+        </div>
+            <label for="nobg" class="bg-btn"></label>
+            <div id="color-picker-container" style="display: none;">
+                <label for="bg-color-picker">Choose Background Color:</label>
+                <input type="color" id="bg-color-picker" value="#ffffff">
+            </div>
+            <label for="upload-bg" class="upload-btn" id="upload-bg1">Upload Background</label>
+        </div>
+    </div>
+        <div class="galleries-container">
+            <div class="gallery-controls">
+                <button class="nav-button left" id="background-prev">&lt;</button>
+                <div class="gallery" id="background-gallery"></div>
+                <button class="nav-button right" id="background-next">&gt;</button>
+            </div>
+            <div class="gallery-controls">
+                <button class="nav-button left" id="character-prev">&lt;</button>
+                <div class="gallery" id="character-gallery"></div>
+                <button class="nav-button right" id="character-next">&gt;</button>
+            </div>
+            <div class="gallery-controls">
+                <button class="nav-button left" id="pma-prev">&lt;</button>
+                <div class="gallery" id="pma-gallery"></div>
+                <button class="nav-button right" id="pma-next">&gt;</button>
+            </div>
+            <div class="gallery-controls">
+                <button class="nav-button left" id="hat-prev">&lt;</button>
+                <div class="gallery" id="hat-gallery"></div>
+                <button class="nav-button right" id="hat-next">&gt;</button>
+            </div>
+            <div id="text-options">
+                <label for="meme-text">Text:</label>
+                <input type="text" id="meme-text" value="" placeholder="Write your meme">
+                <label for="text-color">Text Color:</label>
+                <input type="color" id="text-color" value="#ffffff">
+                <label for="text-font">Text Font:</label>
+                <select id="text-font">
+                    <option value="Belleza">Belleza</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Courier New">Courier New</option>
+                </select>
+                <button id="add-text">Add Text</button>
+            </div>
+        </div>
+        <div class="buttoa">
+            <div id="memesize">
+            <input type="checkbox" id="resize-character-checkbox">
+            <label for="resize-character-checkbox" id="memesize" class="memesize">Meme Size</label></div>
+                <div class="nowif" id="nowif">
+                    <input type="checkbox" id="cb7-2" name="characterType" value="nowif" class="tgl tgl-ios">
+                    Nowif selector
+            </div>
+                <label for="cb7-2" class="tgl-btn"></label>
+            </div>
+            </div>
+        </div>
+
+        
+    </div>
+    <input type="file" id="upload-bg" style="display: none;">
+    <button id="download-meme" class="download">Download PMA</button>
+    <script src="script.js"></script>
+</body>
+</html>
